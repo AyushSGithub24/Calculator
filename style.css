@@ -1,10 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 main {
-    /* background-color: #212121; */
+    background-color:rgb(74, 45, 7);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,38 +12,73 @@ main {
 
 }
 .container {
-    border: 1px solid red;
+    border: 20px solid #212121;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 400px;
+    width: 300px;
+    height: 450px;
     justify-content: start;
     
 }
 .input{
-    border: none;
-    border-radius: 3px;
+    border-radius: 3px solid red;
     background-color: black;
     color: aliceblue;
     font-size: 35px;
     text-align: right;
-    width: 248px;
-    flex: 2;
+    width: 100%;
+    flex: 3;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
- 
+.upper{
+    flex: 1;
+    word-wrap: break-word;
+  word-break: break-all;
+  padding: 5px;
+}
+ .lower{
+    flex: 2;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 5px;
+    
+ }
 .row{
     display: flex;
     flex: 1;
+    background-color:black;
+    border-radius: 2px;
 }
 .coloums {
-     border: 1px solid black; 
+    border: 1px solid black; 
     background-color: #464545;
     color: white;
-    border-radius: 2px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
+    margin: 2px;
+}
+.coloums:hover {
+    background-color: grey;
+}
+[data-operation],
+#equal{
+    background-color: orange;
+}
+[data-operation]:hover{
+    background-color: rgb(255, 106, 0);
 }
 
+#equal:hover{
+    background-color: rgb(56, 245, 97);
+    color: black;
+}
