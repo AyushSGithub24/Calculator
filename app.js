@@ -13,10 +13,14 @@ clear.addEventListener("click", () => {
 })
 fact.addEventListener("click", () => {
     let k = display.textContent;
-    num1 = Number(k);
-    mindisplay.textContent = num1 + "!";
-    num1 = factorial(num1);
-    display.textContent = num1
+        num1 = Number(k);
+        if (num1 > 999999999) {
+            alert("out of limit")
+        } else {
+            mindisplay.textContent = num1 + "!";
+            num1 = factorial(num1);
+            display.textContent = num1
+        }
 })
 function factorial(num) {
     if (num == 0) return 1;
@@ -102,9 +106,9 @@ window.addEventListener("keydown", (e) => {
         if (num1 > 999999999) {
             alert("out of limit")
         } else {
+            mindisplay.textContent = num1 + "!";
             num1 = factorial(num1);
             display.textContent = num1
-            mindisplay.textContent = num1 + "!";
         }
     }
     if (e.key == "Escape") {
